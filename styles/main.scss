@@ -1,0 +1,99 @@
+// --------
+// VARIABLES
+// --------
+
+$clr-Yellow: hsl(47, 88%, 63%);
+$clr-White: hsl(0, 0%, 100%);
+$clr-Grey: hsl(0, 0%, 50%);
+$clr-Black: hsl(0, 0%, 7%);
+
+// ------------
+// CSS RESET
+// ------------
+*,
+*::after,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: $clr-Yellow;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   justify-content: space-around;
+  .card {
+    width: 320px;
+    margin: auto;
+    background-color: $clr-White;
+    border: 1px solid $clr-Black;
+    border-radius: 10px;
+    padding: 1rem 1.3rem;
+
+    -webkit-box-shadow: 5px 5px 0px 0px $clr-Black;
+    -moz-box-shadow: 5px 5px 0px 0px $clr-Black;
+    box-shadow: 5px 5px 0px 0px $clr-Black;
+
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .category {
+      font-weight: 800;
+      background-color: $clr-Yellow;
+      padding: 10px;
+      width: 100px;
+      font-size: 15px;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    .date {
+      margin-bottom: 1rem;
+      font-size: 16px;
+    }
+    .title {
+      font-size: 20px;
+      margin-bottom: 1rem;
+      width: 300px;
+      font-weight: 800;
+    }
+    .lead {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: $clr-Grey;
+    }
+  }
+  .author {
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    .writer {
+      font-weight: 800;
+    }
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+@media (min-width: 426px) {
+  .container {
+    .card {
+      width: 350px;
+    }
+  }
+}
